@@ -16,12 +16,14 @@ $(document).ready(function(){
 
 
 		//create a conditional to check if the following function is true.
+		//the minute will determine the color change. if even or if odd.
 		if(isEven(min)){
 			$('#min').css('color', 'lime');
 		} else {
 			$('#min').css('color', 'white');
 		}
 		
+		//every five minutes the background color will change. 
 		if(pastFive(min)){
 			$('#clock').css("background", 'red');
 		}else{
@@ -31,7 +33,8 @@ $(document).ready(function(){
 		
     	
 	}, 2);
-
+	//the variable 'color' of the body will be determined the variable 'x'. math.random will allow for the 
+	//color change. math.floor returns the largest number less than or equal to a given number.
 	setInterval(function(){
 		var color = ['green', 'pink', 'purple']
 		var x = Math.floor(Math.random() * (3) + 0);
